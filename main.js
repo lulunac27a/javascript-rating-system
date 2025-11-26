@@ -8,6 +8,7 @@ let numberOfRatings = 0;
 submitButton.addEventListener("click", () => {
     totalRating += selectedRating;
     numberOfRatings++;
+    ratingOutputText.textContent = `Selected rating: ${selectedRating}\nAverage rating: ${(totalRating / numberOfRatings).toFixed(2)}\nTotal ratings: ${numberOfRatings}`;
 });
 
 function changeRating(rating) {
